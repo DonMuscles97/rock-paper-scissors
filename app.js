@@ -84,7 +84,7 @@ function playGame(e) {
   console.log(computerOutput.value)
   console.log(results.value);
   console.log(typeof player)
-  player.value = ''
+  playerInput.value = ''
   // computerOutput.value = ''
 
   e.preventDefault();
