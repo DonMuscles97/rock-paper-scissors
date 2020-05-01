@@ -1,16 +1,17 @@
 // Listen for the go button
 document.querySelector('#button').addEventListener('click', playGame)
 
-let player = document.querySelector('#userChoice')
+let playerInput = document.querySelector('#userChoice')
 let userOutput = document.querySelector('#userOutput')
 let computerOutput =  document.querySelector('#computerOutput')
 let results = document.querySelector('#results')
 
 
 function getUserChoice (userInput)  {
-  userInput = userInput.toLowerCase();
+  // userInput = userInput.toLowerCase();
+  console.log(userInput)
   if (userInput === 'rock' || userInput === 'paper' ||  userInput === 'scissors' || userInput === 'bomb'){
-    userOutput.value = player.value;
+    userOutput.value = userInput;
     
   } else {
     alert('choose rock paper or scissors')
@@ -73,13 +74,16 @@ function determineWinner(userChoice, computerChoice) {
 
 
 function playGame(e) {
-  getUserChoice(player.value);
+  let play = playerInput.value
+  let player = play.toLowerCase()
+  getUserChoice(player);
   getComputerChoice();
-  determineWinner(player.value, computerOutput.value)
+  determineWinner(player, computerOutput.value)
 
-  console.log(player.value)
+  console.log(player)
   console.log(computerOutput.value)
   console.log(results.value);
+  console.log(typeof player)
   player.value = ''
   // computerOutput.value = ''
 
