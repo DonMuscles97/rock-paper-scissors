@@ -7,7 +7,7 @@ let computerOutput =  document.querySelector('#computerOutput')
 let results = document.querySelector('#results')
 
 
-const getUserChoice = (userInput) => {
+function getUserChoice (userInput)  {
   userInput = userInput.toLowerCase();
   if (userInput === 'rock' || userInput === 'paper' ||  userInput === 'scissors' || userInput === 'bomb'){
     userOutput.value = player.value;
@@ -19,7 +19,7 @@ const getUserChoice = (userInput) => {
   }
 }; 
 
-const getComputerChoice = () => {
+function getComputerChoice() {
   choice = Math.floor(Math.random() * 3);
   // computerOutput.value = ''
   switch (choice) {
@@ -38,7 +38,7 @@ const getComputerChoice = () => {
   }
 };
 
-const determineWinner = (userChoice, computerChoice) => {
+function determineWinner(userChoice, computerChoice) {
   if (userChoice === 'bomb') {
     results.value = 'you win but you cheated'
 
