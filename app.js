@@ -15,7 +15,7 @@ function getUserChoice (userInput)  {
     
   } else {
     alert('choose rock paper or scissors')
-    userOutput.value = 'some bull shit try again'
+    userOutput.value = 'an invalid option'
 
   }
 }; 
